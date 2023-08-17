@@ -47,3 +47,5 @@ Copy code
                          Pip3 install scikit-learn (MACOS)
 
   This command will install scikit-learn along with its dependencies.
+
+  FOR MORE INFORMATION CHECK THE README.md.pages file in the free2use phisshing url detect.
