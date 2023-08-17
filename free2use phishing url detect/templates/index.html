@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website is developed to able to identify and alert users of a phishing URL.">
+    <meta name="keywords" content="phishing url,phishing,cyber security,machine learning,classifier,python">
+    <meta name="author" content="ADDO ALBERT ADDOQUAYE and NII ODAI">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link href="static/styles.css" rel="stylesheet">
+    
+    <title>FREE2USE URL DETECT</title>
+ 
+  </head>
+
+<body>
+    
+  <div class="main-body">
+  <div class="form" id="form1">
+        
+      <header id="header">
+            <h1>FREE2USE PHISHING URL DETECT</h1>
+        <p></p>
+
+      </header>
+
+    <br><br><br>
+        <form action="/predict" method ="post">
+            <input type="text" class="form__input" name ='url' id="url" placeholder="ENTER a URL:www.example.com" required="" />
+            <label for="url" class="form__label">URL</label>
+            <button class="button" role="button" >CHECK HERE</button>
+        </form>
+
+        <footer>
+          <p>ALL RIGHTS RESERVED ©2022 BY ADDO ALBERT ADDOQUAYE AND NII ODAI</p>
+        </footer>
+        
+        <br>
+     <br>
+     
+    <p></p>
+
+     <button class="help-button">HELP</button>
+    <div class="help-popup">
+      <p>"REPORT A SUSPICIOUS URL HERE!!!"</P>
+       <P> "GET TIPS ON HOW TO SPOT PHISHING SCAMS."</P>
+       <P> "LEARN MORE ABOUT PHISHING PREVENTION."</P>
+       <P> "CONTACT US FOR ANY INFO ON +233264951384."</p>
+    </div>
+    <button id="about-button">ABOUT</button>
+    
+   
+
+    
+    
+    
+    
+    <P>THIS PHISHING DETECTOR SITE HELPS ANALYZE AND PROTECT USERS FROM URL SCAMS</p>
+
+
+    <P></p>
+    
+    
+    
+    
+    <p>FOR MORE INFORMATION, <a href="mailto:asvpkniiekvntae@gmail.com">EMAIL US</a></p>
+    <p></p>
+    <p></p>
+
+
+
+    </div>
+
+    <div id="form2">
+
+    <br>
+    <h6 class = "right "><a href= {{ url }} target="_blank">{{ url }}</a></h6>
+       
+    <br>
+    <h3 id="prediction"></h3>
+    <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" >STILL WANT TO CONTINUE?</button>
+    <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">CONTINUE</button>
+    </div> 
+</div>
+
+   
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    
+    <script>
+          // Get the help button and the pop-up element
+          const helpButton = document.querySelector('.help-button');
+          const helpPopup = document.querySelector('.help-popup');
+    
+          // Add an event listener to the help button
+          helpButton.addEventListener('click', () => {
+            
+            // Toggle the display of the pop-up
+            if (helpPopup.style.display === 'none') {
+              helpPopup.style.display = 'block';
+            } else {
+              helpPopup.style.display = 'none';
+            }
+          });
+          const aboutButton = document.getElementById('about-button');
+
+           aboutButton.addEventListener('click', () => {
+           alert('FREEUSE URL PHISHDETECT uses machine learning algorithms to detect phishing URLs. These algorithms can be trained on a dataset of known phishing and legitimate URLs, and then used to classify new URLs as either phishing or legitimate.Beware of the phishing website that appears to be a legitimate login page, but is actually a scam designed to steal your personal information.');});
+        
+        </script>
+    
+
+     <script>
+        // This code uses a conditional statement to predict the safety of a website based on a given input value, and displays a corresponding label and button. However, its accuracy and reliability may be limited, and further measures should be taken to ensure online safety. 
+            
+            let x = '{{xx}}';
+            let num = x*100;
+            if (0<=x && x<0.50){
+                num = 100-num;
+            }
+            let txtx = num.toString();
+            if(x<=1 && x>=0.50){
+                var label = "WEBSITE IS SAFE TO USE.";
+                document.getElementById("prediction").innerHTML = label;
+                document.getElementById("button1").style.display="block";
+            }
+            else if (0<=x && x<0.50){
+                var label = "WEBSITE IS UNSAFE TO USE."
+                document.getElementById("prediction").innerHTML = label ;
+                document.getElementById("button2").style.display="block";
+            }
+        
+    </script>
+    
+</body>
+
+</html>
+
