@@ -14,7 +14,8 @@ pip install -r requirements.txt
 
 * Flask: Flask is a lightweight web framework for Python. To install Flask, you can use the following command in your terminal or command prompt: 
 * Copy code
-*                         pip install flask (WINDOWS) 
+
+                          pip install flask (WINDOWS) 
                           pip3 install flask (MACOS)
 
                        
@@ -31,8 +32,7 @@ pip install -r requirements.txt
    This will install Pandas and it’s dependencies.
 
 * NumPy: NumPy is a fundamental package for numerical computations in Python. To install NumPy, use:  
-
-Copy code
+* Copy code
 
               pip install numpy   (WINDOWS)                            
               pip3 install bumpy (MACOS)          
@@ -40,8 +40,7 @@ Copy code
   This will install NumPy and its dependencies.
 
 * scikit-learn: scikit-learn is a machine learning library for Python. To install scikit-learn, use:  
-Copy code 
-
+* Copy code 
 
                          pip install scikit-learn (WINDOWS) 
                          Pip3 install scikit-learn (MACOS)
