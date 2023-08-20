@@ -46,5 +46,7 @@ pip install -r requirements.txt
                          Pip3 install scikit-learn (MACOS)
 
   This command will install scikit-learn along with its dependencies.
+  
+NB: An additional python library must be imported before running the code ( flask run )
 
   FOR MORE INFORMATION CHECK THE README.md.pages file in the free2use phisshing url detect.
